@@ -1,0 +1,293 @@
+SQL> select * from customers;
+
+CUSTI NAME            PHONE      EMAIL                                          
+----- --------------- ---------- --------------------                           
+ADDRESS                                                                         
+----------------------------------------                                        
+q4cwT Fredrick        4087754741 Fbarbarossa@scu.edu                            
+1482 Prussia Ave                                                                
+                                                                                
+xm4hm Bill            2222221111 asdf@me.com                                    
+132 O St                                                                        
+                                                                                
+BOhyN Fred            2221113333 lolo@p.com                                     
+123 Apple Way                                                                   
+                                                                                
+
+CUSTI NAME            PHONE      EMAIL                                          
+----- --------------- ---------- --------------------                           
+ADDRESS                                                                         
+----------------------------------------                                        
+UqX4V Max             2220009922 sadcf@po.org                                   
+882 Tyran Way                                                                   
+                                                                                
+wsu32 Tim             8708587    yasd@4fj                                       
+sai3ihr                                                                         
+                                                                                
+I46Ik Bob             77283492   Rob@bob.com                                    
+1234 Robert Way                                                                 
+                                                                                
+
+CUSTI NAME            PHONE      EMAIL                                          
+----- --------------- ---------- --------------------                           
+ADDRESS                                                                         
+----------------------------------------                                        
+r2Nbh Nick            346        f                                              
+ff                                                                              
+                                                                                
+Fgugm Paul            8876       nbg                                            
+kjyty                                                                           
+                                                                                
+hvxTd Yank            274802     ua                                             
+kjkkd                                                                           
+                                                                                
+
+CUSTI NAME            PHONE      EMAIL                                          
+----- --------------- ---------- --------------------                           
+ADDRESS                                                                         
+----------------------------------------                                        
+UiXYi Wendy           22222222   We@me.com                                      
+123 Wendy Way                                                                   
+                                                                                
+Y1emM Endy            2          2                                              
+2                                                                               
+                                                                                
+bb321 Jerry           4082233222 jerry@me.com                                   
+1444 Jerry Way                                                                  
+                                                                                
+
+CUSTI NAME            PHONE      EMAIL                                          
+----- --------------- ---------- --------------------                           
+ADDRESS                                                                         
+----------------------------------------                                        
+ab115 Phil            4082244222 phil@me.com                                    
+1492 Phil Ave                                                                   
+                                                                                
+byo2t Mike            4066233222 mike@me.com                                    
+123 Mike St                                                                     
+                                                                                
+
+14 rows selected.
+
+SQL> select * from goldcustomers;
+
+DATEJOINE CUSTI                                                                 
+--------- -----                                                                 
+03-JUN-20 q4cwT                                                                 
+03-JUN-20 hvxTd                                                                 
+03-JUN-20 Y1emM                                                                 
+01-JAN-20 byo2t                                                                 
+
+SQL> select * from itemorder;
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+123ab bb321 yu452 03-JUN-20          1                    10                    
+122ab bb321 yu452 02-JUN-20          1                    10                    
+152ab bb321 yu452 02-JUN-20          1                    10                    
+132ab bb321 yu452 02-JUN-20          1                    10                    
+znN8r byo2t a4452 02-JUN-20          1                     0                    
+DrKNP byo2t a4452 02-JUN-20          1                     0                    
+3VJ2O ab115 yu452 03-JUN-20          2                    10                    
+ZSebZ bb321 yu452 03-JUN-20          1                    10                    
+KlCU2 bb321 yu452 03-JUN-20          1                    10                    
+ab123 byo2t a4452 07-AUG-04          2 05-MAY-03           0                    
+ab124 ab115 a4452 07-AUG-04          2                    10                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+ab125 byo2t a4452 07-AUG-04          2                     0                    
+ab126 byo2t a4452 07-AUG-04          2                     0                    
+ab127 byo2t a4452 07-AUG-04          2                     0                    
+ab128 byo2t a4452 07-AUG-04          2                     0                    
+ab129 bb321 a4452 07-AUG-04          2                    10                    
+ab131 bb321 yu452 07-AUG-04          2                    10                    
+ab133 bb321 a4452 07-AUG-04          5                    10                    
+
+18 rows selected.
+
+SQL> select * from storeitems;
+
+ITEMI      PRICE                                                                
+----- ----------                                                                
+a4452       9.99                                                                
+b1472      14.99                                                                
+yu452      19.99                                                                
+sz412      14.99                                                                
+
+SQL> selcet * from comicbooks;
+SP2-0734: unknown command beginning "selcet * f..." - rest of line ignored.
+SQL> select * from comicbooks;
+
+ISBN          TITLE                PUBLISHED NOOFCOPIES ITEMI                   
+------------- -------------------- --------- ---------- -----                   
+2837462093827 Batman               05-DEC-99          0 a4452                   
+7627462091115 Spiderman            07-AUG-04          1 b1472                   
+
+SQL> select * from tshirt;
+
+SHIR ITEMI                                                                      
+---- -----                                                                      
+XL   yu452                                                                      
+S    sz412                                                                      
+
+
+SQL> execute showItemOrders('byo2t', DATE '2010-01-01');
+
+PL/SQL procedure successfully completed.
+
+SQL> set serveroutput on
+SQL> execute showItemOrders('byo2t', DATE '2010-01-01');
+CUSTOMER: Mike PHONE: 4066233222 EMAIL: mike@me.com ADDRESS: 123 Mike St        
+ORDER ID: znN8r ITEM ID: a4452 DATE ORDERED: 02-JUN-20 # of ITEMS: 1SHIPPED     
+FEES: 0 TOTAL: 10.71                                                            
+ORDER ID: DrKNP ITEM ID: a4452 DATE ORDERED: 02-JUN-20 # of ITEMS: 1SHIPPED     
+FEES: 0 TOTAL: 10.71                                                            
+ORDER ID: ab123 ITEM ID: a4452 DATE ORDERED: 07-AUG-04 # of ITEMS:              
+2SHIPPED05-MAY-03 FEES: 0 TOTAL: 21.43                                          
+ORDER ID: ab125 ITEM ID: a4452 DATE ORDERED: 07-AUG-04 # of ITEMS: 2SHIPPED     
+FEES: 0 TOTAL: 21.43                                                            
+ORDER ID: ab126 ITEM ID: a4452 DATE ORDERED: 07-AUG-04 # of ITEMS: 2SHIPPED     
+FEES: 0 TOTAL: 21.43                                                            
+ORDER ID: ab127 ITEM ID: a4452 DATE ORDERED: 07-AUG-04 # of ITEMS: 2SHIPPED     
+FEES: 0 TOTAL: 21.43                                                            
+ORDER ID: ab128 ITEM ID: a4452 DATE ORDERED: 07-AUG-04 # of ITEMS: 2SHIPPED     
+FEES: 0 TOTAL: 21.43                                                            
+TOTAL SPENT: 128.57                                                             
+
+PL/SQL procedure successfully completed.
+
+SQL> execute setShippingDate ('ab124', DATE '2020-05-20');
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from itemorder;
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+123ab bb321 yu452 03-JUN-20          1                    10                    
+122ab bb321 yu452 02-JUN-20          1                    10                    
+152ab bb321 yu452 02-JUN-20          1                    10                    
+132ab bb321 yu452 02-JUN-20          1                    10                    
+znN8r byo2t a4452 02-JUN-20          1                     0                    
+DrKNP byo2t a4452 02-JUN-20          1                     0                    
+3VJ2O ab115 yu452 03-JUN-20          2                    10                    
+ZSebZ bb321 yu452 03-JUN-20          1                    10                    
+KlCU2 bb321 yu452 03-JUN-20          1                    10                    
+ab123 byo2t a4452 07-AUG-04          2 05-MAY-03           0                    
+ab124 ab115 a4452 07-AUG-04          2 20-MAY-20          10                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+ab125 byo2t a4452 07-AUG-04          2                     0                    
+ab126 byo2t a4452 07-AUG-04          2                     0                    
+ab127 byo2t a4452 07-AUG-04          2                     0                    
+ab128 byo2t a4452 07-AUG-04          2                     0                    
+ab129 bb321 a4452 07-AUG-04          2                    10                    
+ab131 bb321 yu452 07-AUG-04          2                    10                    
+ab133 bb321 a4452 07-AUG-04          5                    10                    
+
+18 rows selected.
+
+SQL> select computeTotal(orderid) from itemorder;
+
+COMPUTETOTAL(ORDERID)                                                           
+---------------------                                                           
+                32.16                                                           
+                32.16                                                           
+                32.16                                                           
+                32.16                                                           
+                 53.6                                                           
+                10.71                                                           
+                32.16                                                           
+                32.16                                                           
+                21.43                                                           
+                32.15                                                           
+                21.43                                                           
+
+COMPUTETOTAL(ORDERID)                                                           
+---------------------                                                           
+                21.43                                                           
+                21.43                                                           
+                21.43                                                           
+                32.15                                                           
+                 53.6                                                           
+                 64.3                                                           
+                10.71                                                           
+
+18 rows selected.
+
+SQL> execute additemorder ('yy222','yu452','byo2t', DATE '2020-10-10', 3, DATE '2020-11-11');
+not gold                                                                        
+testing: yu452 0                                                                
+
+PL/SQL procedure successfully completed.
+
+SQL> select * from itemorder;
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+123ab bb321 yu452 03-JUN-20          1                    10                    
+122ab bb321 yu452 02-JUN-20          1                    10                    
+152ab bb321 yu452 02-JUN-20          1                    10                    
+yy222 byo2t yu452 10-OCT-20          3 11-NOV-20           0                    
+132ab bb321 yu452 02-JUN-20          1                    10                    
+znN8r byo2t a4452 02-JUN-20          1                     0                    
+DrKNP byo2t a4452 02-JUN-20          1                     0                    
+3VJ2O ab115 yu452 03-JUN-20          2                    10                    
+ZSebZ bb321 yu452 03-JUN-20          1                    10                    
+KlCU2 bb321 yu452 03-JUN-20          1                    10                    
+ab123 byo2t a4452 07-AUG-04          2 05-MAY-03           0                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+ab124 ab115 a4452 07-AUG-04          2 20-MAY-20          10                    
+ab125 byo2t a4452 07-AUG-04          2                     0                    
+ab126 byo2t a4452 07-AUG-04          2                     0                    
+ab127 byo2t a4452 07-AUG-04          2                     0                    
+ab128 byo2t a4452 07-AUG-04          2                     0                    
+ab129 bb321 a4452 07-AUG-04          2                    10                    
+ab131 bb321 yu452 07-AUG-04          2                    10                    
+ab133 bb321 a4452 07-AUG-04          5                    10                    
+
+19 rows selected.
+
+SQL> select * from itemorder;
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+123ab bb321 yu452 03-JUN-20          1                     0                    
+122ab bb321 yu452 02-JUN-20          1                     0                    
+152ab bb321 yu452 02-JUN-20          1                     0                    
+yy222 byo2t yu452 10-OCT-20          3 11-NOV-20           0                    
+FPUOr 1F1jY yu452 05-JUN-20          3                     0                    
+132ab bb321 yu452 02-JUN-20          1                     0                    
+znN8r byo2t a4452 02-JUN-20          1                     0                    
+DrKNP byo2t a4452 02-JUN-20          1                     0                    
+3VJ2O ab115 yu452 03-JUN-20          2                    10                    
+ZSebZ bb321 yu452 03-JUN-20          1                     0                    
+KlCU2 bb321 yu452 03-JUN-20          1                     0                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+piPth GGhw9 yu452 05-JUN-20          3                     0                    
+ab123 byo2t a4452 07-AUG-04          2 05-MAY-03           0                    
+ab124 ab115 a4452 07-AUG-04          2 20-MAY-20          10                    
+ab125 byo2t a4452 07-AUG-04          2                     0                    
+ab126 byo2t a4452 07-AUG-04          2                     0                    
+ab127 byo2t a4452 07-AUG-04          2                     0                    
+ab128 byo2t a4452 07-AUG-04          2                     0                    
+ab129 bb321 a4452 07-AUG-04          2                     0                    
+ab131 bb321 yu452 07-AUG-04          2                     0                    
+ab133 bb321 a4452 07-AUG-04          5                     0                    
+yl0bH Tyqte yu452 05-JUN-20          3                     0                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+vdv4K xEfWM yu452 05-JUN-20          3                     0                    
+zzWrh xpdy7 yu452 05-JUN-20         54                     0   !!!!!!!!          
+
+24 rows selected.
+
+SQL> spool off
+

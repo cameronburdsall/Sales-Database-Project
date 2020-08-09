@@ -1,0 +1,79 @@
+SQL> select * from itemorder;
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+123ab bb321 yu452 03-JUN-20          1                     0                    
+122ab bb321 yu452 02-JUN-20          1                     0                    
+152ab bb321 yu452 02-JUN-20          1                     0                    
+yy222 byo2t yu452 10-OCT-20          3 11-NOV-20           0                    
+FPUOr 1F1jY yu452 05-JUN-20          3                     0                    
+132ab bb321 yu452 02-JUN-20          1                     0                    
+znN8r byo2t a4452 02-JUN-20          1                     0                    
+DrKNP byo2t a4452 02-JUN-20          1                     0                    
+3VJ2O ab115 yu452 03-JUN-20          2                    10                    
+ZSebZ bb321 yu452 03-JUN-20          1                     0                    
+KlCU2 bb321 yu452 03-JUN-20          1                     0                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+piPth GGhw9 yu452 05-JUN-20          3                     0                    
+ab123 byo2t a4452 07-AUG-04          2 05-MAY-03           0                    
+ab124 ab115 a4452 07-AUG-04          2 20-MAY-20          10                    
+ab125 byo2t a4452 07-AUG-04          2                     0                    
+ab126 byo2t a4452 07-AUG-04          2                     0                    
+ab127 byo2t a4452 07-AUG-04          2                     0                    
+ab128 byo2t a4452 07-AUG-04          2                     0                    
+ab129 bb321 a4452 07-AUG-04          2                     0                    
+ab131 bb321 yu452 07-AUG-04          2                     0                    
+ab133 bb321 a4452 07-AUG-04          5                     0                    
+yl0bH Tyqte yu452 05-JUN-20          3                     0                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+vdv4K xEfWM yu452 05-JUN-20          3                     0                    
+zzWrh xpdy7 yu452 05-JUN-20         54                    10      !!!!!!              
+
+24 rows selected.
+
+SQL> insert into goldcustomers values (DATE '2020-01-01', 'xpdy7');
+
+1 row created.
+
+SQL> select * from itemorder;
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+123ab bb321 yu452 03-JUN-20          1                     0                    
+122ab bb321 yu452 02-JUN-20          1                     0                    
+152ab bb321 yu452 02-JUN-20          1                     0                    
+yy222 byo2t yu452 10-OCT-20          3 11-NOV-20           0                    
+FPUOr 1F1jY yu452 05-JUN-20          3                     0                    
+132ab bb321 yu452 02-JUN-20          1                     0                    
+znN8r byo2t a4452 02-JUN-20          1                     0                    
+DrKNP byo2t a4452 02-JUN-20          1                     0                    
+3VJ2O ab115 yu452 03-JUN-20          2                    10                    
+ZSebZ bb321 yu452 03-JUN-20          1                     0                    
+KlCU2 bb321 yu452 03-JUN-20          1                     0                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+piPth GGhw9 yu452 05-JUN-20          3                     0                    
+ab123 byo2t a4452 07-AUG-04          2 05-MAY-03           0                    
+ab124 ab115 a4452 07-AUG-04          2 20-MAY-20          10                    
+ab125 byo2t a4452 07-AUG-04          2                     0                    
+ab126 byo2t a4452 07-AUG-04          2                     0                    
+ab127 byo2t a4452 07-AUG-04          2                     0                    
+ab128 byo2t a4452 07-AUG-04          2                     0                    
+ab129 bb321 a4452 07-AUG-04          2                     0                    
+ab131 bb321 yu452 07-AUG-04          2                     0                    
+ab133 bb321 a4452 07-AUG-04          5                     0                    
+yl0bH Tyqte yu452 05-JUN-20          3                     0                    
+
+ORDER CUSTI ITEMI DATEOFORD  NOOFITEMS SHIPPEDDA SHIPPINGFEE                    
+----- ----- ----- --------- ---------- --------- -----------                    
+vdv4K xEfWM yu452 05-JUN-20          3                     0                    
+zzWrh xpdy7 yu452 05-JUN-20         54                     0   !!!!!!!!          
+
+24 rows selected.
+
+SQL> spool off

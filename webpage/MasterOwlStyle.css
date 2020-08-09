@@ -1,0 +1,47 @@
+body
+{
+        background-color: #fdfd96;
+        color: #222222;
+        margin: 0;
+        font-family: Arial, Helvetica, Courier;
+}
+
+.title-wrapper
+{
+        background-color: #333;
+        color: #eee;
+        text-align: center;
+        border: 5px gray solid;
+        padding: 5px;
+        margin-top: 10px;
+        margin-right: 20%;
+        margin-left: 20%;
+}
+.pic-wrapper
+{
+    background-color: white;
+    color: red;
+    text-align: center;
+    border: 5px maroon solid;
+    padding: 15px;
+    margin-top: 5px; 
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.about
+{
+    background-color: #ddd;
+    color: #444;
+    border: 5px grey solid;
+    padding: 10px;
+    margin: 10px
+}
+.link
+{
+    background-color: #ddd;
+    color: #444;
+    text-align: center;
+    border: 5px grey solid;
+    padding: 10px;
+    margin: 10px
+}

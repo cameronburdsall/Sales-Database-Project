@@ -1,0 +1,5 @@
+Here is the URL for the website component of the project.
+
+http://students.engr.scu.edu/~cburdsal/COEN178Project/sales.html
+
+This will take you to a home page that has multiple links to various PHP pages.
